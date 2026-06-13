@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Happy 20th Birthday! 🎉</h1>
+        <p>A collection of our favorite memories.</p>
+    </header>
+
+    <!-- Tab Buttons -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab('year1')">Our First Year</button>
+        <button class="tab-button" onclick="openTab('travels')">Travels</button>
+        <button class="tab-button" onclick="openTab('fun')">Fun Times</button>
+    </div>
+
+    <!-- Tab Content: Year 1 -->
+    <div id="year1" class="tab-content" style="display: block;">
+        <h2>Where It All Began</h2>
+        <div class="gallery">
+            <!-- Ensure your image paths match exactly, including case sensitivity -->
+            <img src="images/pic1.jpg" alt="Memory 1">
+            <img src="images/pic2.jpg" alt="Memory 2">
+        </div>
+    </div>
+
+    <!-- Tab Content: Travels -->
+    <div id="travels" class="tab-content" style="display: none;">
+        <h2>Adventures Together</h2>
+        <div class="gallery">
+            <img src="images/pic3.jpg" alt="Memory 3">
+        </div>
+    </div>
+
+    <!-- Tab Content: Fun -->
+    <div id="fun" class="tab-content" style="display: none;">
+        <h2>Laughs & Smiles</h2>
+        <div class="gallery">
+            <img src="images/pic4.jpg" alt="Memory 4">
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            let i;
+            let x = document.getElementsByClassName("tab-content");
+            let buttons = document.getElementsByClassName("tab-button");
+            
+            // Hide all tabs
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            
+            // Remove 'active' class from all buttons
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add 'active' class to the button
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
