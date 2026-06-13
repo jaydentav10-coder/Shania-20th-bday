@@ -1,32 +1,81 @@
-<div id="year1" class="tab-content" style="display: block;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Happy 20th Birthday! 🎉</h1>
+        <p>A collection of my favorite memories from our first year.</p>
+    </header>
+
+    <!-- Romantic Tab Buttons -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab('year1')">Our First Year</button>
+        <button class="tab-button" onclick="openTab('iloveyou')">I Love You</button>
+        <button class="tab-button" onclick="openTab('always')">Forever & Always</button>
+    </div>
+
+    <!-- Tab Content: Our First Year (Collage) -->
+    <div id="year1" class="tab-content" style="display: block;">
         <h2>The Best Year Yet</h2>
         <div class="collage">
-            <img src="images/pic1.jpg" alt="Memory 1">
-            <img src="images/pic2.jpg" alt="Memory 2">
-            <img src="images/pic3.jpg" alt="Memory 3">
-            <img src="images/pic4.jpg" alt="Memory 4">
-            <img src="images/pic5.jpg" alt="Memory 5">
-            <img src="images/pic6.jpg" alt="Memory 6">
-            <img src="images/pic7.jpg" alt="Memory 7">
+            <img src="images/IMG_343.jpg" alt="Memory 1">
+            <img src="images/IMG_389.jpg" alt="Memory 2">
+            <img src="images/IMG_442.jpg" alt="Memory 3">
+            <img src="images/IMG_992.jpg" alt="Memory 4">
+            <img src="images/IMG_998.jpg" alt="Memory 5">
+            <img src="images/IMG_999.jpg" alt="Memory 6">
         </div>
     </div>
 
+    <!-- Tab Content: I Love You -->
     <div id="iloveyou" class="tab-content" style="display: none;">
         <h2>More Than Words</h2>
         <div class="collage">
-            <img src="images/pic8.jpg" alt="Love 1">
-            <img src="images/pic9.jpg" alt="Love 2">
-            <img src="images/pic10.jpg" alt="Love 3">
-            <img src="images/pic11.jpg" alt="Love 4">
+            <img src="images/IMG_1203.jpg" alt="Love 1">
+            <img src="images/IMG_3139.jpg" alt="Love 2">
+            <img src="images/IMG_3202.jpg" alt="Love 3">
+            <img src="images/IMG_3262.jpg" alt="Love 4">
+            <img src="images/IMG_3432.jpg" alt="Love 5">
         </div>
     </div>
 
+    <!-- Tab Content: Forever & Always -->
     <div id="always" class="tab-content" style="display: none;">
         <h2>To Many More</h2>
         <div class="collage">
-            <img src="images/pic12.jpg" alt="Always 1">
-            <img src="images/pic13.jpg" alt="Always 2">
-            <img src="images/pic14.jpg" alt="Always 3">
-            <img src="images/pic15.jpg" alt="Always 4">
+            <img src="images/IMG_3448.jpg" alt="Always 1">
+            <img src="images/IMG_4323.jpg" alt="Always 2">
+            <img src="images/IMG_4638.jpg" alt="Always 3">
+            <img src="images/IMG_5477.jpg" alt="Always 4">
         </div>
     </div>
+
+    <script>
+        function openTab(tabName) {
+            let i;
+            let x = document.getElementsByClassName("tab-content");
+            let buttons = document.getElementsByClassName("tab-button");
+            
+            // Hide all tabs
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            
+            // Remove 'active' class from all buttons
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add 'active' class
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
