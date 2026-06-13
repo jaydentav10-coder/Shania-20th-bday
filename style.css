@@ -49,38 +49,70 @@ h1 {
     animation: fadeIn 0.5s;
 }
 
+/* Letter Styling */
+.love-letter {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #444;
+}
+
+.love-letter p {
+    margin-bottom: 15px;
+}
+
+.love-letter p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.love-letter p:last-child {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 /* Masonry Collage Styling */
 .collage {
-        column-count: 3;
-        column-gap: 15px;
-        max-width: 1100px;
-        margin: 0 auto;
+    column-count: 3;
+    column-gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .collage img {
-        width: 100%;
-        margin-bottom: 15px; /* Creates the space between stacked photos */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-        display: block; /* Prevents weird splitting across columns */
+    width: 100%;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block; 
 }
 
 .collage img:hover {
-        transform: scale(1.03); /* Subtle zoom effect when hovering over a photo */
+    transform: scale(1.03); 
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 800px) {
-        .collage {
-            column-count: 2;
-        }
+    .collage {
+        column-count: 2;
+    }
 }
 
 @media (max-width: 500px) {
-        .collage {
-            column-count: 1;
-        }
+    .collage {
+        column-count: 1;
+    }
+    .love-letter {
+        padding: 20px;
+        font-size: 15px;
+    }
 }
 
 @keyframes fadeIn {
